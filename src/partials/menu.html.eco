@@ -16,6 +16,9 @@
                 <li class="nav-item <% if @isActiveMenu('.'): %>nav-active<% end %>">
                     <a href="<%= @site.url %>/" class="nav-link" title="Home">Home</a>
                 </li>
+                <li class="nav-item <% if @isActiveMenu('polyfills'): %>nav-active<% end %>">
+                    <a href="<%= @site.url %>/polyfills/" class="nav-link" title="Polyfills">Polyfills</a>
+                </li>
                 <li class="nav-item <% if @isActiveMenu('articles'): %>nav-active<% end %>">
                     <a href="<%= @site.url %>/articles/" class="nav-link" title="Articles">Articles</a>
                 </li>
