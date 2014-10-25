@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[WebComponents.org]]></title>
+        <description><![CDATA[A place to discuss and evolve Web Component best-practices]]></description>
+        <link>http://webcomponents.org</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 25 Oct 2014 15:15:28 GMT</lastBuildDate>
+        <atom:link href="http://webcomponents.org/articles.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 25 Oct 2014 15:15:00 GMT</pubDate>
+        <item>
+            <title><![CDATA[Introduction to the template elements]]></title>
+            <description><![CDATA[<p>Templates allow teams to divide their work, allowing designers to focus on views
+written in HTML and CSS, while other engineers focus on logic and back end
+integration.</p>
+<p>In this article, you&#39;ll learn how to use a new HTML element that is already
+available on Chrome, Opera, Firefox and Safari.</p>
+<!-- Read more -->
+
+<p>For those who prefer to watch instead of read, here is a summary of how it works.</p>
+<div class="video-wrap">
+  <iframe src="//www.youtube.com/embed/qC5xK6H0GlQ"></iframe>
+</div>
+
+<h2 id="why-templates-for-browsers-">Why Templates for browsers?</h2>
+<p>&quot;Templates&quot; used to be a technology frequently used with server side technologies
+such as PHP, Django (Python) or Ruby on Rails. But lately it&#39;s becoming more
+common to use templates in the browser.</p>
+<p>This is primarily driven by the changing landscape of web architecture. Servers
+are becoming more dedicated to processing data, clients are becoming more
+dedicated to user interactions and views. MVC (Model, View, Controller) is no
+longer a server side only pattern, it&#39;s becoming a client side thing - look at
+AngularJS, Backbone.js, Ember.js, etc.</p>
+<p>Solutions for browser side templating in the past used JavaScript. For example,
+<a href="http://mustache.github.io/">Mustache.js</a>,
+<a href="http://handlebarsjs.com/">Handlebars.js</a>, <a href="https://angularjs.org/">AngularJS</a>,
+<a href="http://backbonejs.org/">Backbone.js</a>. But techniques used in those libraries
+have a few pitfalls.</p>
+<h3 id="using-div-tag-">using div tag:</h3>
+<p>In the following example, the template is actually a <code>div</code> tag which is hidden with
+a bit of CSS. The downside of this approach is that the browser will fetch
+resources from inside the template, even if those resources haven&#39;t been used
+yet. In this case, <code>logo.svg</code>.</p>
+<pre class="highlight"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"display:none;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Web Components<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://webcomponents.org/img/logo.svg"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre><h3 id="using-script-tag-">using script tag:</h3>
+<p>In the following example, the template content is stored inside of a <code>script</code> tag.
+The down side of this approach is that the templates will be converted into DOM
+elements   using <code>.innerHTML</code>, which could introduce a cross site scripting
+vulnerability if an adequate sanity check is not performed.</p>
+<pre class="highlight"><code class="hljs gherkin"><span class="hljs-variable">&lt;script type="text/template"&gt;</span>
+  <span class="hljs-variable">&lt;div&gt;</span>
+    <span class="hljs-variable">&lt;h1&gt;</span>Web Components<span class="hljs-variable">&lt;/h1&gt;</span>
+    <span class="hljs-variable">&lt;img src="http://webcomponents.org/img/logo.svg"&gt;</span>
+  <span class="hljs-variable">&lt;/div&gt;</span>
+<span class="hljs-variable">&lt;/script&gt;</span>
+</code></pre><p>And this is where native <code>&lt;template&gt;</code> comes in. <code>&lt;template&gt;</code> addresses
+these problems by providing an ability to insert &quot;inert HTML tags&quot; into a
+document.</p>
+<p>By using &quot;inert HTML tags&quot;:  </p>
+<ul>
+<li>inlined scripts won&#39;t be executed without being stamped out</li>
+<li>resources such as <code>img</code> or <code>video</code> won&#39;t be fetched without being stamped out</li>
+</ul>
+<h2 id="how-do-i-use-templates-">How do I use templates?</h2>
+<p>To define a template, simply wrap your content with a <code>&lt;template&gt;</code> tag.  </p>
+<pre class="highlight"><code class="hljs nimrod">&lt;<span class="hljs-keyword">template</span> id=<span class="hljs-string">"template"</span>&gt;
+  &lt;style&gt;
+    ...
+  &lt;/style&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;
+    &lt;h1&gt;<span class="hljs-type">Web</span> <span class="hljs-type">Components</span>&lt;/h1&gt;
+    &lt;img src=<span class="hljs-string">"http://webcomponents.org/img/logo.svg"</span>&gt;
+  &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">template</span>&gt;
+</code></pre><p>In order to stamp out the template, you&#39;ll need to write a bit of JavaScript.  </p>
+<pre class="highlight"><code class="hljs nimrod">&lt;script&gt;
+  <span class="hljs-keyword">var</span> <span class="hljs-keyword">template</span> = document.querySelector('<span class="hljs-comment">#template');</span>
+  <span class="hljs-keyword">var</span> clone = document.importNode(<span class="hljs-keyword">template</span>.content, <span class="hljs-literal">true</span>);
+  <span class="hljs-keyword">var</span> host = document.querySelector('<span class="hljs-comment">#host');</span>
+  host.appendChild(clone);
+&lt;/script&gt;
+&lt;<span class="hljs-keyword">div</span> id=<span class="hljs-string">"host"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre><p><a href="http://jsbin.com/qaxiw/7/edit">Here&#39;s a live example</a>.  </p>
+<p>The <code>template</code> node queried on first line will be cloned using
+<code>document.importNode()</code>. By assigning <code>true</code> to the 2nd argument, we are
+creating a deep copy. Appending it to another node will bring the contents of
+the template to life, in other words</p>
+<ul>
+<li>Included <code>script</code> tags will be executed</li>
+<li>Included resources (<code>img</code>, <code>video</code>, etc) will be fetched</li>
+<li>Included <code>style</code> tags will take effect</li>
+</ul>
+<h2 id="the-template-element-doesn-t-provide-data-binding">The template element doesn&#39;t provide data binding</h2>
+<p>If you have experience working with other template engines such as AngularJS,
+Mustache.js, etc, you may expect to be able to use</p>
+<p><strong>placeholders</strong></p>
+<pre class="highlight"><code class="hljs nimrod">&lt;<span class="hljs-keyword">template</span> <span class="hljs-keyword">bind</span>=<span class="hljs-string">"{{items}}"</span>&gt;&lt;/<span class="hljs-keyword">template</span>&gt;
+</code></pre><p><strong>repeaters</strong></p>
+<pre class="highlight"><code class="hljs nimrod">&lt;<span class="hljs-keyword">template</span> repeat=<span class="hljs-string">"{{item in items}}"</span>&gt;&lt;/<span class="hljs-keyword">template</span>&gt;
+</code></pre><p><strong>conditionals</strong></p>
+<pre class="highlight"><code class="hljs nimrod">&lt;<span class="hljs-keyword">template</span> <span class="hljs-keyword">if</span>=<span class="hljs-string">"{{item.active}}"</span>&gt;&lt;/<span class="hljs-keyword">template</span>&gt;
+</code></pre><p>but these are different concepts from vanilla templating. These concepts are
+actually called &quot;data binding&quot; and are not implemented in the native template
+element. If you are interested in using these features, I recommend looking into
+<a href="http://www.polymer-project.org/">Polymer</a>
+(<a href="https://github.com/Polymer/TemplateBinding">TemplateBinding</a>) or
+<a href="http://www.x-tags.org/">x-tags</a>.</p>
+<h2 id="supported-browsers">Supported browsers</h2>
+<p>The template element is supported by Chrome, Opera, Safari and Firefox as of
+October 2014. To check availability, go to
+<a href="https://www.chromestatus.com/features/5207287069147136">chromestatus.com</a>. For
+polyfilling Internet Explorer and other legacy browsers, you can use
+<a href="https://github.com/polymer/platform">platform.js</a>.</p>
+<h2 id="resources">Resources</h2>
+<p>If you are interested in learning more about the template element, head over to:  </p>
+<ul>
+<li><a href="http://goo.gl/JEIWir">HTML&#39;s New Template Tag - HTML5Rocks</a></li>
+<li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-template-element">WhatWG HTML Template specification</a></li>
+</ul>
+]]></description>
+            <link>http://webcomponents.org/articles/introduction-to-template-element</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/introduction-to-template-element</guid>
+            <pubDate>Tue, 07 Oct 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How GitHub is using Web Components in production]]></title>
+            <description><![CDATA[<p>More and more people have been using Web Components. Some just want to play with
+it, while others have been using it in really big projects.</p>
+<p>In order to keep pushing this community forward we decided to start a series of
+interviews with some early adopters.</p>
+<p>Today, we&#39;ll start by asking some questions to <a href="https://twitter.com/joshpeek/">Joshua Peek</a>,
+a programmer who has been working on <a href="https://github.com/">GitHub</a> for the past
+three years.</p>
+<!-- Read more -->
+
+<h3 id="even-with-your-high-traffic-volume-of-visitors-worldwide-github-com-is-using-web-components-in-production-how-hard-was-it-to-convince-them-to-adopt-a-brand-new-technology-like-that-">Even with your high-traffic volume of visitors worldwide, GitHub.com is using Web Components in production. How hard was it to convince them to adopt a brand new technology like that?</h3>
+<p>We&#39;ve actually been really cautious about jumping onto the latest client side
+MVC library of the month. jQuery is pretty much the only framework we&#39;re still
+using. When it comes to standardized web technologies, we&#39;re usually on the
+bleeding edge.</p>
+<p>The <a href="https://github.com/github/time-elements">initial <time> element extension</a>
+we wrote were a pretty minimal impact to start testing the Custom Element APIs.
+If for some reason it didn&#39;t work out, we could easily roll back to our original
+relative time rewriting script.</p>
+<p><img src="/img/stories/github-custom-element.jpg" alt="GitHub.com&#39;s Custom Element"></p>
+<h3 id="the-time-element-extensions-you-created-are-using-only-custom-elements-what-do-you-think-about-other-specs-such-as-html-imports-templates-and-shadow-dom-">The <code>&lt;time&gt;</code> element extensions you created are using only Custom Elements. What do you think about other specs such as HTML Imports, Templates, and Shadow DOM?</h3>
+<p>Template looks really wonderful and I&#39;d love to use it today but the polyfills
+can&#39;t quite handle all the edge cases. Just little things like inert scripts,
+table element fragments and duplicate ids are all the pain points we have with
+just using a dummy <code>&lt;div&gt;</code> element today. But if we can&#39;t trust the polyfill to
+be consistent with the native template element then its just going to cause more
+headaches.</p>
+<p>Shadow DOM is definitely interesting but it seems to be the least well defined
+spec-wise. I&#39;m a little cautious to even use the polyfills since they need to
+hijack almost every DOM query API to define the custom Shadow DOM behavior.
+There could be some performance issues there.</p>
+<p>HTML Imports polyfills rely on eval() to run embed scripts which we block for
+security reasons and just require more undeveloped tooling to inline and rewrite
+URLs. It&#39;s just a lot of work and complexity for not much benefit right now.
+We&#39;re fine just importing both a script and style resource for a component we
+want to use on a page.</p>
+<p>I think we&#39;ll be sticking with just Custom Elements for now. The polyfills work
+and the plain old JS apis work nicely with all our existing infrastructure.</p>
+<h3 id="is-there-any-particular-fallback-strategy-that-you-had-to-implement-for-users-with-old-browsers-">Is there any particular fallback strategy that you had to implement for users with old browsers?</h3>
+<p>Luckily the Custom Elements polyfill goes back to IE 9 which is the oldest
+browser we support. We do still care about the degraded no-js experience beyond
+that. For <code>&lt;time&gt;</code> elements its simple, if you don&#39;t run any JS you just get a
+static date which is acceptable in those cases. I think we&#39;ll try to continue
+the pattern of putting &quot;noscript&quot; content inside the Custom Element tag. Say you
+wanted a custom element version of <code>&lt;select&gt;</code>. You could include a native
+control inside the custom element then upgrade it when the JS actually runs. So
+if the browser is too old or blocks JS, you still have some functioning control.</p>
+<h3 id="besides-extending-that-particular-tag-does-github-have-plans-for-using-any-other-custom-element-">Besides extending that particular tag, does GitHub have plans for using any other Custom Element?</h3>
+<p>Yeah, I think we&#39;re going to be moving forward in this direction. Next up
+probably some simple controls like menus and modals. I&#39;m really hopeful for a
+simple XHR async submission pattern around forms. I&#39;ve been experimenting on a
+project called <a href="https://github.com/josh/async-form-element">async-form-element</a>.
+Not quite production ready yet. But this is the kind of thing I hope gets pushed
+down the HTML spec itself one day.</p>
+<p>I don&#39;t ever see us going all in on Custom Elements for every possible
+thing. We&#39;re not planning on boiling everything down to a single magic
+<code>&lt;github-app&gt;&lt;/github-app&gt;</code>. Use native elements and controls when
+possible and supplement with custom elements.</p>
+<hr>
+<h2 id="credits">Credits</h2>
+<ul>
+<li>Questions written by <a href="https://twitter.com/zenorocha">Zeno Rocha</a> and <a href="https://twitter.com/rob_dodson">Rob Dodson</a>.</li>
+<li>Illustration crafted by <a href="https://twitter.com/cameronmcefee">Cameron McEfee</a> and
+mixed by <a href="https://twitter.com/vitoroff">Vitor Fernandes</a>.</li>
+</ul>
+]]></description>
+            <link>http://webcomponents.org/articles/interview-with-joshua-peek</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/interview-with-joshua-peek</guid>
+            <pubDate>Tue, 30 Sep 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sharing styles across Web Components with Polymer and core-style]]></title>
+            <description><![CDATA[<p>One of the bigger challenges that come with Web Components, is the way how we share common stylesheets across multiple components. Usually, when you build an app and you have styles that are shared along several parts of your code, all you have to do is to is to embed your collected shared styles in your application once, because that&#39;s it, right? So you probably have a build process that first pre-processes your stylesheets, concatenates them to one file and if you&#39;re good, that file gets minified. Great. But does that work for Web Components too?</p>
+]]></description>
+            <link>http://webcomponents.org/articles/sharing-styles-across-web-components-with-polymer-and-core-style</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/sharing-styles-across-web-components-with-polymer-and-core-style</guid>
+            <pubDate>Fri, 01 Aug 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Polymer vs. X-Tag - Here's the difference]]></title>
+            <description><![CDATA[<p>Let&#39;s face it. Web Components is the next big thing. Sure, technologies have to be
+adapted and implemented by browsers first, but we are on the right track.
+There was an article recently popping up in the interwebs about Polymer vs. Angular
+and the differences between those two projects. While it&#39;s fairly easy to understand
+the differences between those two, it&#39;s a bit harder to grasp the different
+directions and approaches of Polymer in comparison to X-Tag, because both seem to
+provide a solution for building custom web components. This article explains the 
+difference between Polymer and X-Tag.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/polymer-vs-x-tag-here-is-the-difference</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/polymer-vs-x-tag-here-is-the-difference</guid>
+            <pubDate>Tue, 29 Jul 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Inheritance and composition with Polymer]]></title>
+            <description><![CDATA[<p>One of the biggest things that come with web components, is the fact that you
+can extend existing elements. And since your own custom elements are also just 
+HTML elements, you can extend them as well as native elements. 
+From a surface point of view there&#39;s no difference between native elements and custom elements.
+Let&#39;s take a look at how we can extend existing elements with Polymer.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/inheritance-and-composition-with-polymer</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/inheritance-and-composition-with-polymer</guid>
+            <pubDate>Thu, 17 Jul 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Component interop with React and Custom Elements]]></title>
+            <description><![CDATA[<p>Today we’ll look at how to wrap <a href="http://facebook.github.io/react/">React</a>
+components using Custom Elements, allowing us to interop with Web Component-
+based libraries using the DOM as a simple configuration API. Similar to
+libraries like <a href="http://polymer-project.org/">Polymer</a>, React cares about
+composition, lifecycle events and modularity so seeing how well it fits with Web
+Components is an interesting thought experiment.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/component-interop-with-react-and-custom-elements</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/component-interop-with-react-and-custom-elements</guid>
+            <pubDate>Tue, 08 Jul 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Here's the difference between Polymer and Angular]]></title>
+            <description><![CDATA[<p>A year after pulling back the curtains on the Polymer Project, Google’s taken
+part of I/O 2014 to demo what the code can do. Right on cue, the web is abuzz
+with discussion comparing Polymer to other popular web frameworks, and it’s no
+surprise since it bears some resemblance to Google’s very own AngularJS. Join me
+after the break as I introduce Polymer and explore just how it relates to
+Angular.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/the-difference-between-polymer-and-angular</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/the-difference-between-polymer-and-angular</guid>
+            <pubDate>Tue, 24 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ten Principles for Great General-Purpose Web Components]]></title>
+            <description><![CDATA[<p>Creating really good general-purpose components entails more work than creating
+components for a single organization or product. To create components that
+measure up to the gold standard of the built-in HTML elements, your component
+will need to be useful right out of the box, work in a wide variety of
+circumstances, be composable into other components, and more.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/principles-for-general-purpose-components</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/principles-for-general-purpose-components</guid>
+            <pubDate>Fri, 13 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why we created WebComponents.org?]]></title>
+            <description><![CDATA[<p>It all started 7 months ago in October, 2013 with a new organization on GitHub
+called WebComponentsOrg. Googlers from the Polymer/Chrome team, along with some
+great folks from Mozilla’s X-Tag/Brick, as well as other Web Components
+community members (like me) had been cooking up a vision for a simple, neutral
+site/community devoted to encouraging good best practices for Web Components.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/why-we-created-webcomponentsorg</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/why-we-created-webcomponentsorg</guid>
+            <pubDate>Mon, 05 May 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Web Components Best Practices]]></title>
+            <description><![CDATA[<p><a href="http://www.w3.org/TR/components-intro/">Web Components</a> (WC) are a new set of web platform features that enable developers to build applications in a declarative, composable way. The following is an initial list of best practices we advocate component authors consider to ensure their elements are good citizens in the Web Component ecosystem.</p>
+<!-- Read more -->
+
+<p>Keep in mind that we fully expect best practices to evolve over time and so this initial list should be considered a starting point for a living document that hopes to capture practices with a degree of consensus.</p>
+<ol>
+<li><strong>Namespacing</strong>: <a href="http://www.w3.org/TR/custom-elements/">Custom elements</a> should have a dash in their name (e.g <code>&lt;x-tabs&gt;</code>, <code>&lt;my-tabs&gt;</code>). The text before the dash is effectively a namespace. You want to keep it short but also unique. Try not to overlap on someone else&#39;s prefix if possible. Only use a prefix shorter than three characters if you already have lots of developer interest in your set of components.</li>
+<li><strong>Mimic built-in elements as closely as possible</strong>: Your component should feel just like any other natively implemented element to developers. If in the future you&#39;re formally speccing your element&#39;s API, will you feel embarrassed by how different it feels?</li>
+<li><strong>Failing silently is golden</strong>: Components should act like native DOM elements, so avoid creating elements that throw JS errors from ordinary DOM interactions, for example: you can place a <code>&lt;div&gt;</code> inside a <code>&lt;ul&gt;</code>, and while it may not behave or render normally, it shouldn&#39;t throw errors either.</li>
+<li><strong>Attributes for data in</strong> Use attributes to pass configuration in. Use boolean attributes for boolean values. Ex: <code>&lt;my-element selected&gt;</code> instead of <code>&lt;my-element selected=&quot;true&quot;&gt;</code>.</li>
+<li><strong>Events for data out</strong>: Use custom events to pass information out of components unless the information to pass is large or changes extremely often.</li>
+<li><strong>Include Dependencies</strong>: Include all dependencies your component needs. Don&#39;t worry if that means including redundant <code>&lt;link rel=&quot;import&quot; ...&gt;</code>; as long as you set appropriate cache headers, these will only be fetched and loaded once. Using <a href="http://en.wikipedia.org/wiki/HTTP_2.0">HTTP 2.0</a> can reduce the cost of having multiple files, or you can concatenate and minify them into a single file when you deploy your app.</li>
+<li><strong>Document your component</strong>: Document your component so that others know how to use it. Components have many aspects that count as part of their API, including things that you might not think of as part of the API.<ul>
+<li>Attributes can be described concisely with example markup.</li>
+<li>If one component is designed to be nested inside another one, show it being used in that context.</li>
+<li>List its JavaScript methods and properties.</li>
+<li>List its events.</li>
+<li>When using <a href="http://www.w3.org/TR/shadow-dom/">Shadow DOM</a>, the <code>&lt;content&gt;</code> element and <code>select</code> attribute allow you to select which nodes to put where. If your component treats different elements specially in these selectors, document it!</li>
+<li>If your component relates to a microdata format, document how to apply that microdata to your component.</li>
+</ul>
+</li>
+<li><strong>Don&#39;t put too much in Shadow DOM</strong>: Shadow DOM allows you to stuff a bunch of complex junk out of sight. However, that&#39;s not an excuse to have as many DOM elements as you want in your shadow, as more elements will still lead to worse performance. In addition, try to keep your configuration and state visible by keeping anything semantic exposed in the logical DOM. Cruft goes in the Shadow; semantic stuff doesn&#39;t.</li>
+<li><strong>Don&#39;t create more custom elements than you need</strong>: If you have two similar custom elements and the only difference between them is a different visual structure/display of the same data, consider consolidating them into one element and create two different templates to switch between. Alternatively, elements can be extended rather than duplicating similar functionality in two separate elements.</li>
+<li><strong>Harmonize your declarative and imperative APIs</strong>: Attributes form (part of) your declarative API; your prototype defines your imperative API. Try to keep the analogous parts linked whenever possible so a user can modify either with the same effect.</li>
+<li><strong>Don&#39;t presume the context you&#39;ll operate in</strong>: If your component is successful, it will be used in contexts you never expected, and mixed in with components you&#39;ve never heard of. Strive to be as encapsulated and flexible--don&#39;t rely on any external frameworks or structure wherever possible.</li>
+</ol>
+<h2 id="as-always-don-t-forget-">As always, don&#39;t forget...</h2>
+<p>A successful web component will be used by many people in many different
+contexts--meaning that following general web development best practices becomes
+even more important.</p>
+<ol>
+<li><strong>Accessibility</strong>: Make your component accessible by using appropriate ARIA roles—something that is much more important when we&#39;re creating new types of elements! In cases where inheritance from a semantic base element is for any reason impossible or infeasible, be sure to add a <code>role=&quot;&quot;</code> attribute, if any apply.</li>
+<li><strong>Performance</strong>: If you use a callback-based API for long-running operations, don&#39;t block the main thread excessively. Debounce methods and logic loops that affect rendering performance using requestAnimationFrame as a queue. Respond to being removed from the tree by suspending expensive operations like animation—and don&#39;t start expensive operations until you&#39;re actually inserted into the DOM.</li>
+<li><strong>Script isn&#39;t always the answer</strong>: Many structure and style techniques that once required JavaScript can now be accomplished with pure CSS in the world of web components.</li>
+<li><strong>Be Responsive</strong>: Where possible, and applicable, design your components so that they responsively adapt to their environment. Your users may use your component for things you never dreamed of.</li>
+<li><strong>Testing</strong>: Custom elements, like components you author today, should ideally have unit tests that serve as a sanity check for your API. </li>
+</ol>
+<h2 id="contributions">Contributions</h2>
+<p>This list of best practices will evolve over time and we welcome the community to discuss and suggest changes to them via the comments below.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/web-components-best-practices</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/web-components-best-practices</guid>
+            <pubDate>Tue, 29 Apr 2014 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

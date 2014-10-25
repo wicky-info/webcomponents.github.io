@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[WebComponents.org]]></title>
+        <description><![CDATA[A place to discuss and evolve Web Component best-practices]]></description>
+        <link>http://webcomponents.org</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 25 Oct 2014 15:15:28 GMT</lastBuildDate>
+        <atom:link href="http://webcomponents.org/presentations.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 25 Oct 2014 15:15:00 GMT</pubDate>
+        <item>
+            <title><![CDATA[Multi-device apps with Web Components]]></title>
+            <description><![CDATA[<p>Building a multi-device app is extremely challenging, unless you&#39;re an expert
+developer. It&#39;s time for the web to get its own collection of fast, beautiful,
+and responsive by default components.</p>
+<!-- Read more -->
+
+<p>In this talk, we&#39;ll look at how you can use readily available Web Components to
+quickly build apps that look gorgeous on phones, tablets, and desktops. With
+these new tools we can greatly simplify the process of supporting multiple
+screen sizes, while also keeping our code sane and readable.</p>
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/kn0y7uugO0Y"></iframe>
+</div>
+
+<script async class="speakerdeck-embed" data-id="182b5d001d95013278dd06e915146373" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>]]></description>
+            <link>http://webcomponents.org/presentations/multi-device-apps-with-web-components-at-jqcon</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/multi-device-apps-with-web-components-at-jqcon</guid>
+            <pubDate>Sat, 13 Sep 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[As I Walk Through The Valley Of The Shadow Of DOM]]></title>
+            <description><![CDATA[<p>Let&#39;s party like it’s the late 1990&#39;s — When the Components spec was
+<a href="http://www.w3.org/TR/NOTE-HTMLComponents">originally introduced</a> and 2Pac was
+livin&#39; in a gangsta&#39;s paradise. While the implementation of this paradigm is
+long overdue, at least it&#39;s been a sufficient amount of time for Microsoft to
+forget <a href="http://www.w3.org/TR/components-intro/">Google stole their idea</a>.</p>
+<!-- Read more -->
+
+<p>In this presentation, we&#39;ll look at each piece of the Web Components spec
+including Templates, Decorators, Custom Elements, The Shadow Dom, and HTML
+Imports. We&#39;ll also look at how this may integrate with ECMAScript 6 Modules to
+create a truly modularized, encapsulated, decoupled web.</p>
+<p>Although Web Components are not yet ready for use in production we&#39;ll look at
+how we can be building our applications with components in mind, and how
+frameworks like Angular, Ember, and Polymer are already doing so. This is not
+only one of the most exciting specs in draft, it&#39;s also one of the most
+important paradigm shifts in web development since Al Gore created the internet.</p>
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/nbsWP2cPhhU"></iframe>
+</div>
+
+<script async class="speakerdeck-embed" data-id="93aa45201cdc013275c65e46c93fec54" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>]]></description>
+            <link>http://webcomponents.org/presentations/as-i-walk-through-the-valley-of-the-shadow-of-dom-at-jqcon</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/as-i-walk-through-the-valley-of-the-shadow-of-dom-at-jqcon</guid>
+            <pubDate>Fri, 12 Sep 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Componentize The Web: Back To The Browser!]]></title>
+            <description><![CDATA[<p>Web Components are ushering in a HTML renaissance, encouraging us to think about
+how we can bring back the declarative simplicity of HTML to the components we
+write today.</p>
+<!-- Read more -->
+
+<p>Learn how Custom Elements, Shadow DOM, HTML Imports and Templates
+can help you stay productive and build elements that are (potentially) more
+maintainable and more encapsulated than the models we have today.</p>
+<p>In this talk we&#39;ll do a whirlwind tour of Web Components, Polymer and Material Design.</p>
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/GOPXVLxp9Nc"></iframe>
+</div>
+
+<script async class="speakerdeck-embed" data-id="3d369820e26e01312bd84edea5a75f20" data-ratio="1.6" src="//speakerdeck.com/assets/embed.js"></script>]]></description>
+            <link>http://webcomponents.org/presentations/componentize-the-web-back-to-the-browser-at-lxjs</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/componentize-the-web-back-to-the-browser-at-lxjs</guid>
+            <pubDate>Sat, 28 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Making Polymer Elements Accessible]]></title>
+            <description><![CDATA[<p>Custom elements allow you to create your own encapsulated components on the web,
+however there are a number of questions that arise from this. How do you build
+elements that are accessible to everyone? Can they be navigated with a keyboard?
+How well do they work with screenreaders and ARIA? Learn how to create
+accessible elements that all your users can benefit from.</p>
+<!-- Read more -->
+
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/_IBiXfxhF-A"></iframe>
+</div>
+
+<div class="video-wrap">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/36519773"></iframe>
+</div>]]></description>
+            <link>http://webcomponents.org/presentations/making-polymer-elements-accessible</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/making-polymer-elements-accessible</guid>
+            <pubDate>Tue, 24 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Unlock the next era of UI development with Polymer]]></title>
+            <description><![CDATA[<p>Entering the multi-screen era means rethinking how we build our applications.
+Producing a few PSDs doesn&#39;t cut it anymore, we have to start seeing the things
+we design as components within larger systems. Join us to learn how to use
+Polymer to revolutionize your design process. With these new tools we can create
+the UIs of the future, and shorten the time between concept and reality.</p>
+<!-- Read more -->
+
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/HKrYfrAzqFA"></iframe>
+</div>
+
+<div class="video-wrap">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/36418662"></iframe>
+</div>]]></description>
+            <link>http://webcomponents.org/presentations/unlock-the-next-era-of-ui-development-with-polymer-at-io</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/unlock-the-next-era-of-ui-development-with-polymer-at-io</guid>
+            <pubDate>Tue, 24 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Polymer and the Web Components revolution]]></title>
+            <description><![CDATA[<p>A huge opportunity is brewing. One where web development becomes a powerfully
+rich ecosystem of discoverable, sharable, and reusable components. Polymer is
+the first library of its kind to fully embrace this brave new web platform.</p>
+<!-- Read more -->
+
+<p>In this session we’ll reveal the latest with Polymer, what Polymer is doing to
+create an end-to-end workflow for developers and their users, unveil the
+burgeoning ecosystem of web components, and demonstrate the next generation of
+web apps. The web components revolution is here. Join us in building the future!</p>
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/yRbOSdAe_JU"></iframe>
+</div>
+
+<div class="video-wrap">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/36712429"></iframe>
+</div>]]></description>
+            <link>http://webcomponents.org/presentations/polymer-and-the-web-components-revolution-at-io</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/polymer-and-the-web-components-revolution-at-io</guid>
+            <pubDate>Tue, 24 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Polymer and Web Components change everything you know about Web development]]></title>
+            <description><![CDATA[<p>Web components are a game changer. Unlike other new features, the technologies
+are purely about developer productivity, solving many of web development&#39;s
+shortcomings. Polymer and web components change how we think about, design, and
+compose web applications. Learn how the Web Components revolution makes you more
+productive and reduces the cognitive load of being a web developer.</p>
+<!-- Read more -->
+
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/8OJ7ih8EE7s"></iframe>
+</div>
+
+<p><a href="http://polymer-change.appspot.com/">
+    <img src="../../img/stories/polymer-and-web-components-change-everything-you-know-about-web-development-at-io-cover.jpg" alt="Presentation Cover">
+</a></p>
+]]></description>
+            <link>http://webcomponents.org/presentations/polymer-and-web-components-change-everything-you-know-about-web-development-at-io</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/polymer-and-web-components-change-everything-you-know-about-web-development-at-io</guid>
+            <pubDate>Tue, 24 Jun 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Accessibility of Web Components]]></title>
+            <description><![CDATA[<p>We&#39;ve been talking a lot about Web Components as a community. Encapsulation,
+templating, custom elements, polyfills: it&#39;s an exciting time to be a developer!
+(<code>&lt;taco-button&gt;</code>, anyone?) Before we create the next generation of soulless
+<code>&lt;div&gt;</code> tags, we should consider the role of semantics in shiny, new
+technologies.</p>
+<!-- Read more -->
+
+<p>In this talk, we&#39;ll discuss web accessibility in a bleeding-edge
+way to illustrate that accessibility conversations don&#39;t have to be boring or
+old-school.</p>
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/BgvDZZ8Ms8c"></iframe>
+</div>
+
+<p><a href="http://marcysutton.github.io/accessibility-of-web-components/slides.html">
+    <img src="../../img/stories/accessibility-of-web-components-at-jsconf-us-cover.jpg" alt="Presentation Cover">
+</a></p>
+]]></description>
+            <link>http://webcomponents.org/presentations/accessibility-of-web-components-at-jsconf-us</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/accessibility-of-web-components-at-jsconf-us</guid>
+            <pubDate>Fri, 30 May 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A future called Web Components]]></title>
+            <description><![CDATA[<p>Web Components are a collection of standards which are working their way
+through the W3C. Discover how this new concept formed by Templates,
+Decorators, Shadow DOM, Custom Elements, and HTML Imports will revolutionize the
+way we develop and interact on the web.</p>
+<!-- Read more -->
+
+<div class="video-wrap">
+    <iframe src="//player.vimeo.com/video/97308701?byline=0&amp;portrait=0&amp;color=ff9933"></iframe>
+</div>
+
+<script async class="speakerdeck-embed" data-id="ee6d05c0497301316db35a0ddfd7041e" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>]]></description>
+            <link>http://webcomponents.org/presentations/a-future-called-web-components-at-front-trends</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/a-future-called-web-components-at-front-trends</guid>
+            <pubDate>Fri, 09 May 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Road to Web Components]]></title>
+            <description><![CDATA[<p>The web is abuzz with excitement for Web Components. Is it just hype?</p>
+<p>In this presentation, Tom talk about how Ember&#39;s Components bring many of the
+features of Web Components to developers today, and provide some real-world
+examples of how components have made Ember developers more productive.</p>
+<!-- Read more -->
+
+<p>Lastly, he&#39;ll talk about how Web Components can bridge the worlds of Ember,
+Angular and Polymer to create an ecosystem of reusable components that can work
+across libraries and frameworks.</p>
+<div class="video-wrap">
+    <iframe src="//www.youtube.com/embed/yLyyXHhSl8w"></iframe>
+</div>
+
+<script async class="speakerdeck-embed" data-id="ef67b470bbd80131ec9d56ae81354ca9" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>]]></description>
+            <link>http://webcomponents.org/presentations/the-road-to-web-components-at-empirejs</link>
+            <guid isPermaLink="true">http://webcomponents.org/presentations/the-road-to-web-components-at-empirejs</guid>
+            <pubDate>Mon, 05 May 2014 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

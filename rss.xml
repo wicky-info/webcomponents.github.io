@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[WebComponents.org]]></title>
+        <description><![CDATA[A place to discuss and evolve Web Component best-practices]]></description>
+        <link>http://webcomponents.org</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 25 Oct 2014 15:15:28 GMT</lastBuildDate>
+        <atom:link href="http://webcomponents.org/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 25 Oct 2014 15:15:00 GMT</pubDate>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<div class="wrapper">
+    <header class="header" role="banner">
+        <a class="logo" href="http://webcomponents.org">
+            <img src="http://webcomponents.org/img/logo.svg" alt="WebComponents.org" width="246" height="158">
+        </a>
+        <h1 class="title">WebComponents.org</h1>
+        <h2 class="subtitle">A place to discuss and evolve Web Component best-practices</h2>
+    </header>
+
+    <main class="card-container layout-home" role="main">
+        <div class="column-first">
+            <!-- What? -->
+<section class="card card-what" role="region" itemscope itemtype="http://schema.org/WebPage">
+    <h3 itemprop="name">What?</h3>
+    <p class="description" itemprop="description">
+        WebComponents.org is where pioneers and community-members of the Web
+        Components ecosystem (like <em>Polymer</em>, <em>X-tags</em>, and other
+        interested parties) document web components best practices so that
+        others can follow the same path instead of needlessly striking out on
+        their own.
+    </p>
+</section>
+
+            <!-- Browser Support -->
+<section class="card card-support" role="region">
+    <h3>Browser Support</h3>
+    <table class="status-table">
+        <tr>
+            <td></td>
+            
+                <td>Chrome</td>
+            
+                <td>Opera</td>
+            
+                <td>Firefox</td>
+            
+                <td>Safari</td>
+            
+                <td>IE</td>
+            
+        </tr>
+        <tr>
+            <td><img title="Templates" src="http://webcomponents.org/img/icon-status-templates.png" alt=""></td>
+            
+                <td><a title="Stable" href="http://www.chromestatus.com/features/5207287069147136" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Stable" href="http://www.chromestatus.com/features/5207287069147136" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Stable" href="http://caniuse.com/#feat=template" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Not implemented yet"  class="icon-status icon-status-red"></a></td>
+            
+                <td><a title="Under consideration" href="http://status.modern.ie/templateelement" class="icon-status icon-status-red"></a></td>
+            
+        </tr>
+        <tr>
+            <td><img title="HTML Imports" src="http://webcomponents.org/img/icon-status-htmlimports.png" alt=""></td>
+            
+                <td><a title="Stable" href="http://www.chromestatus.com/features/5144752345317376" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Stable" href="http://dev.opera.com/blog/opera-23/" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Bug" href="https://bugzilla.mozilla.org/show_bug.cgi?id=877072" class="icon-status icon-status-yellow"></a></td>
+            
+                <td><a title="Not implemented yet"  class="icon-status icon-status-red"></a></td>
+            
+                <td><a title="Under consideration" href="http://status.modern.ie/htmlimports" class="icon-status icon-status-red"></a></td>
+            
+        </tr>
+        <tr>
+            <td><img title="Custom Elements" src="http://webcomponents.org/img/icon-status-customelements.png" alt=""></td>
+            
+                <td><a title="Stable" href="http://www.chromestatus.com/features/4642138092470272" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Stable" href="http://dev.opera.com/blog/opera-20/" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Flag" href="https://bugzilla.mozilla.org/show_bug.cgi?id=856140" class="icon-status icon-status-yellow"></a></td>
+            
+                <td><a title="Not implemented yet"  class="icon-status icon-status-red"></a></td>
+            
+                <td><a title="Under consideration" href="http://status.modern.ie/customelements" class="icon-status icon-status-red"></a></td>
+            
+        </tr>
+        <tr>
+            <td><img title="Shadow DOM" src="http://webcomponents.org/img/icon-status-shadowdom.png" alt=""></td>
+            
+                <td><a title="Stable" href="http://www.chromestatus.com/features/5479141319114752" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Stable" href="http://dev.opera.com/blog/opera-22/" class="icon-status icon-status-green"></a></td>
+            
+                <td><a title="Flag" href="https://bugzilla.mozilla.org/show_bug.cgi?id=806506" class="icon-status icon-status-yellow"></a></td>
+            
+                <td><a title="Not implemented yet"  class="icon-status icon-status-red"></a></td>
+            
+                <td><a title="Under consideration" href="http://status.modern.ie/shadowdomunprefixed" class="icon-status icon-status-red"></a></td>
+            
+        </tr>
+    </table>
+</section>
+
+            <!-- Libraries -->
+<section class="card card-links card-libraries" role="region">
+    <h3>Libraries</h3>
+    <ul class="link-list" itemscope itemtype="http://schema.org/ItemList">
+        
+            <li>
+                <a target="_blank" href="http://bosonic.github.io/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Libraries', 'Bosonic'], 'http://bosonic.github.io/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-bosonic.png" alt="Bosonic" itemprop="image">
+                    <p class="title" itemprop="name">Bosonic</p>
+                    <p class="description" itemprop="description">Bosonic is a set of tools that enable you to build Web Components as the spec currently describes, and supporting not-so-modern browsers like IE9.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://www.polymer-project.org/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Libraries', 'Polymer'], 'http://www.polymer-project.org/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-polymer.png" alt="Polymer" itemprop="image">
+                    <p class="title" itemprop="name">Polymer</p>
+                    <p class="description" itemprop="description">Polymer is a new type of library for the web, built on top of Web
+Components, and designed to leverage the evolving web platform on modern
+browsers.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="https://www.dartlang.org/polymer-dart/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Libraries', 'Polymer.dart'], 'https://www.dartlang.org/polymer-dart/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-dart.png" alt="Polymer.dart" itemprop="image">
+                    <p class="title" itemprop="name">Polymer.dart</p>
+                    <p class="description" itemprop="description">Polymer.dart is a Dart port of Polymer. Build Web Components with Dart,
+and interoperate with Web Components built with JavaScript.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://x-tags.org/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Libraries', 'X-Tag'], 'http://x-tags.org/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-xtags.png" alt="X-Tag" itemprop="image">
+                    <p class="title" itemprop="name">X-Tag</p>
+                    <p class="description" itemprop="description">X-Tag is a small JavaScript library, created and supported by Mozilla, that
+brings Web Components Custom Element capabilities to all modern browsers.</p>
+                </a>
+            </li>
+        
+    </ul>
+</section>
+
+        </div>
+        <div class="column-middle">
+            <!-- Specs -->
+<section class="card card-links card-specs" role="region">
+    <h3>Specs</h3>
+    <ul class="link-list" itemscope itemtype="http://schema.org/ItemList">
+        
+            <li>
+                <a target="_blank" href="http://www.w3.org/wiki/WebComponents/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Specs', 'Web Components'], 'http://www.w3.org/wiki/WebComponents/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-webcomponents.png" alt="Web Components" itemprop="image">
+                    <p class="title" itemprop="name">Web Components</p>
+                    <p class="description" itemprop="description">This document is a non-normative reference, which provides an overview of Web
+Components. It summarizes the normative information in the respective
+specifications in easy-to-digest prose with illustrations.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://w3c.github.io/webcomponents/spec/custom/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Specs', 'Custom Elements'], 'http://w3c.github.io/webcomponents/spec/custom/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-customelements.png" alt="Custom Elements" itemprop="image">
+                    <p class="title" itemprop="name">Custom Elements</p>
+                    <p class="description" itemprop="description">This specification describes the method for enabling the author to define and
+use new types of DOM elements in a document.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://w3c.github.io/webcomponents/spec/imports/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Specs', 'HTML Imports'], 'http://w3c.github.io/webcomponents/spec/imports/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-htmlimports.png" alt="HTML Imports" itemprop="image">
+                    <p class="title" itemprop="name">HTML Imports</p>
+                    <p class="description" itemprop="description">HTML Imports are a way to include and reuse HTML documents in other HTML
+documents.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Specs', 'Templates'], 'https://html.spec.whatwg.org/multipage/scripting.html#the-template-element');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-templates.png" alt="Templates" itemprop="image">
+                    <p class="title" itemprop="name">Templates</p>
+                    <p class="description" itemprop="description">This specification describes a method for declaring inert DOM subtrees in HTML
+and manipulating them to instantiate document fragments with identical contents.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://w3c.github.io/webcomponents/spec/shadow/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Specs', 'Shadow DOM'], 'http://w3c.github.io/webcomponents/spec/shadow/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-shadowdom.png" alt="Shadow DOM" itemprop="image">
+                    <p class="title" itemprop="name">Shadow DOM</p>
+                    <p class="description" itemprop="description">This specification describes a method of establishing and maintaining functional
+boundaries between DOM trees and how these trees interact with each other within
+a document, thus enabling better functional encapsulation within the DOM.</p>
+                </a>
+            </li>
+        
+    </ul>
+</section>
+
+            <!-- Discover -->
+<section class="card card-links card-discover" role="region">
+    <h3>Discover</h3>
+    <ul class="link-list" itemscope itemtype="http://schema.org/ItemList">
+        
+            <li>
+                <a target="_blank" href="http://bower.io/search/?q=web-components" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Discover', 'Bower'], 'http://bower.io/search/?q=web-components');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-bower.png" alt="Bower" itemprop="image">
+                    <p class="title" itemprop="name">Bower</p>
+                    <p class="description" itemprop="description">Bower is a package manager for the web, made by Twitter.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://builtwithpolymer.org/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Discover', 'Built with Polymer'], 'http://builtwithpolymer.org/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-polymer.png" alt="Built with Polymer" itemprop="image">
+                    <p class="title" itemprop="name">Built with Polymer</p>
+                    <p class="description" itemprop="description">A curated collection of web apps and websites using Polymer.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://component.kitchen" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Discover', 'Component Kitchen'], 'http://component.kitchen');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-componentkitchen.png" alt="Component Kitchen" itemprop="image">
+                    <p class="title" itemprop="name">Component Kitchen</p>
+                    <p class="description" itemprop="description">Component catalog for a mainstream HTML audience.</p>
+                </a>
+            </li>
+        
+            <li>
+                <a target="_blank" href="http://customelements.io/" itemprop="url" onclick="_gaq.push(['_trackEvent', 'External links', 'Discover', 'CustomElements.io'], 'http://customelements.io/');">
+                    <img class="icon" src="http://webcomponents.org/img/icon-customelementsio.png" alt="CustomElements.io" itemprop="image">
+                    <p class="title" itemprop="name">CustomElements.io</p>
+                    <p class="description" itemprop="description">A gallery to display Web Components created by the community.</p>
+                </a>
+            </li>
+        
+    </ul>
+</section>
+
+        </div>
+        <div class="column-last">
+            <section class="card card-story card-articles" role="region" itemscope itemtype="http://schema.org/Article">
+    <h3>Articles</h3>
+    
+        
+            <a class="story-image"  href="http://webcomponents.org/articles/introduction-to-template-element" itemprop="url">
+                <img src="http://webcomponents.org/img/stories/devbytes-template.png" alt="Introduction to the template elements" itemprop="image">
+            </a>
+        
+        <a class="title"  href="http://webcomponents.org/articles/introduction-to-template-element" itemprop="url">
+            Introduction to the template elements
+        </a>
+        <div class="description" itemprop="description">
+            <p>Templates allow teams to divide their work, allowing designers to focus on views
+written in HTML and CSS, while other engineers focus on logic and back end
+integration.</p>
+<p>In this article, you&#39;ll learn how to use a new HTML element that is already
+available on Chrome, Opera, Firefox and Safari.</p>
+
+            
+                <a class="read-more" href="http://webcomponents.org/articles/introduction-to-template-element">Read More ></a>
+            
+
+            
+        </div>
+    
+    <a class="see-all" href="http://webcomponents.org/articles/">See all articles</a>
+</section>
+
+            <section class="card card-story card-presentations" role="region" itemscope itemtype="http://schema.org/Article">
+    <h3>Presentations</h3>
+    
+        
+            <a class="story-image"  href="http://webcomponents.org/presentations/multi-device-apps-with-web-components-at-jqcon" itemprop="url">
+                <img src="http://webcomponents.org/img/stories/multi-device-apps-with-web-components-at-jqcon.jpg" alt="Multi-device apps with Web Components" itemprop="image">
+            </a>
+        
+        <a class="title"  href="http://webcomponents.org/presentations/multi-device-apps-with-web-components-at-jqcon" itemprop="url">
+            Multi-device apps with Web Components
+        </a>
+        <div class="description" itemprop="description">
+            <p>Building a multi-device app is extremely challenging, unless you&#39;re an expert
+developer. It&#39;s time for the web to get its own collection of fast, beautiful,
+and responsive by default components.</p>
+
+            
+                <a class="read-more" href="http://webcomponents.org/presentations/multi-device-apps-with-web-components-at-jqcon">Read More ></a>
+            
+
+            
+        </div>
+    
+    <a class="see-all" href="http://webcomponents.org/presentations/">See all presentations</a>
+</section>
+
+            <section class="card card-community" role="region">
+    <h3>Community</h3>
+    <ul class="profile-list">
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/zenorocha" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/e190023b66e2b8aa73a842b106920c93" alt="Zeno Rocha">
+                <p class="name" itemprop="name">Zeno</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/addyosmani" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/96270e4c3e5e9806cf7245475c00b275" alt="Addy Osmani">
+                <p class="name" itemprop="name">Addy</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/ebidel" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/e7948aac7c52b26470be80311873a398" alt="Eric Bidelman">
+                <p class="name" itemprop="name">Eric</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/brizabueno" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/c272a0a8972473fdf231f2b2d897c242" alt="Briza Bueno">
+                <p class="name" itemprop="name">Briza</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/jkomoros" itemprop="url">
+                <img class="picture" itemprop="image" src="https://lh5.googleusercontent.com/-WlbCSDZ9t5Y/AAAAAAAAAAI/AAAAAAAAC2M/A_HM2ovbT2o/s120-c/photo.jpg" alt="Alex Komoroske">
+                <p class="name" itemprop="name">Alex</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/eduardolundgren" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/42327de520e674a6d1686845b30778d0" alt="Eduardo Lundgren">
+                <p class="name" itemprop="name" style="margin-left: -8px;">Eduardo</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/PascalPrecht" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/b32bdb1fc9fdadeb45d7a1267fdd2fc4" alt="Pascal Precht">
+                <p class="name" itemprop="name">Pascal</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/bernarddeluna" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/bc16c9be1e05e65395487b78b1cc72c0" alt="Bernard De Luna">
+                <p class="name" itemprop="name">Bernard</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/sindresorhus" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9" alt="Sindre Sorhus">
+                <p class="name" itemprop="name">Sindre</p>
+            </a>
+        </li>
+        <li itemscope itemtype="http://schema.org/Person">
+            <a target="_blank" href="https://twitter.com/rob_dodson" itemprop="url">
+                <img class="picture" itemprop="image" src="https://2.gravatar.com/avatar/95c3a3b33ea51545229c625bef42e343" alt="Rob Dodson">
+                <p class="name" itemprop="name">Rob</p>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" class="credits-link" href="https://github.com/webcomponents/webcomponents.github.io/graphs/contributors" itemprop="url">
+                <p class="name">and more!</p>
+            </a>
+        </li>
+    </ul>
+</section>
+
+        </div>
+    </main>
+</div>]]></description>
+            <link>http://webcomponents.org/</link>
+            <guid isPermaLink="true">http://webcomponents.org/</guid>
+            <pubDate>Sat, 25 Oct 2014 06:05:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Detailed Introduction To Custom Elements]]></title>
+            <description><![CDATA[<p>You’ve probably heard all the noise about Web Components and how they’re going
+to change Web development forever. If you haven’t, you’ve either been living
+under a rock, are reading this article by accident, or have a full, busy life
+that doesn’t leave you time to read about unstable and speculative Web
+technologies. Well, not me.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/a-detailed-introduction-to-custom-elements</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/a-detailed-introduction-to-custom-elements</guid>
+            <pubDate>Tue, 04 Mar 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A Guide to Web Components]]></title>
+            <description><![CDATA[<p>Recently I was working with a client to train their internal teams on how to
+build web applications. During this process it occurred to me that the way we
+presently architect the front-end is very strange and even a bit broken. In many
+instances you’re either copying huge chunks of HTML out of some doc and then
+pasting that into your app (Bootstrap, Foundation, etc.), or you’re sprinkling
+the page with jQuery plugins which have to be configured using JavaScript. It
+puts us in the rather unfortunate position of having to choose between bloated
+HTML or mysterious HTML, and often we choose both.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/a-guide-to-web-components</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/a-guide-to-web-components</guid>
+            <pubDate>Mon, 11 Nov 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Accessibility and the Shadow DOM]]></title>
+            <description><![CDATA[<p>Web Components, including Shadow DOM, are accessible because assistive technologies encounter pages as rendered, meaning the entire document is read as &quot;one happy tree&quot;. With a polyfill to add broader support, users with modern browsers can interact with Web Components using a keyboard, touch or mouse. Screen readers will also read the page aloud, illustrating how Shadow DOM fits seamlessly into the regular DOM.</p>
+<p>It’s easy: to make Web Components accessible to all users, write accessible code.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/accessibility-and-the-shadow-dom</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/accessibility-and-the-shadow-dom</guid>
+            <pubDate>Wed, 05 Feb 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Accessible Web Components - Part 1]]></title>
+            <description><![CDATA[<p>Custom Elements present a fantastic opportunity for us to improve accessibility
+on the web.</p>
+<p>To be accessible, elements need to work across multiple devices with varying
+screen-sizes and different kinds of input. Moreover, your elements should be
+usable by the broadest group of users, including those with disabilities.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/accessible-web-components</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/accessible-web-components</guid>
+            <pubDate>Wed, 02 Apr 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Component interop with React and Custom Elements]]></title>
+            <description><![CDATA[<p>Today we’ll look at how to wrap <a href="http://facebook.github.io/react/">React</a>
+components using Custom Elements, allowing us to interop with Web Component-
+based libraries using the DOM as a simple configuration API. Similar to
+libraries like <a href="http://polymer-project.org/">Polymer</a>, React cares about
+composition, lifecycle events and modularity so seeing how well it fits with Web
+Components is an interesting thought experiment.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/component-interop-with-react-and-custom-elements</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/component-interop-with-react-and-custom-elements</guid>
+            <pubDate>Tue, 08 Jul 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Custom Elements: defining new elements in HTML]]></title>
+            <description><![CDATA[<p>The web severely lacks expression. To see what I mean, take a peek at a &quot;modern&quot;
+web app like GMail. Modern web apps: built with <code>&lt;div&gt;</code> soup. There&#39;s nothing
+modern about <code>&lt;div&gt;</code> soup. And yet, this is how we build web apps. It&#39;s sad.
+Shouldn&#39;t we demand more from our platform?</p>
+]]></description>
+            <link>http://webcomponents.org/articles/custom-elements-defining-new-elements-in-html</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/custom-elements-defining-new-elements-in-html</guid>
+            <pubDate>Wed, 28 Aug 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Exploring HTML Imports]]></title>
+            <description><![CDATA[<p>Web Components have come a long way in the past few months and one of the
+technologies that I’m most interested in is HTML Imports (or “imports”, for
+short). Imports allow you to load additional documents into your page without
+having to write a bunch of Ajax. This is great for Custom Elements where you
+might want to import a suite of new tags. I spent the day playing with imports
+and thought it would be useful to write up my progress.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/exploring-html-imports</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/exploring-html-imports</guid>
+            <pubDate>Tue, 20 Aug 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How should I name my element?]]></title>
+            <description><![CDATA[<p>Naming is always a challenging task when developing a component. We can create
+truly complex pieces of code but we still have a hard time to name a simple
+variable. The same is true for naming custom elements and we&#39;re here today to
+help you with that.</p>
+<!-- Read more -->
+
+<h2 id="-oneword-vs-two-words-"><code>&lt;oneword&gt;</code> vs. <code>&lt;two-words&gt;</code></h2>
+<p>Although using just one word for your element seems pretty handy (e.g
+<code>&lt;tabs&gt;</code>), according to the <a href="http://www.w3.org/TR/custom-elements/">spec</a>
+your element need to have a dash in its name (e.g <code>&lt;johns-tabs&gt;</code>). That
+way you&#39;re forced to add a namespace which avoids conflicts with existing
+elements.</p>
+<p>Some people use the <code>x-*</code> prefix when they have a single word element that
+doesn&#39;t make sense to break apart like <code>&lt;x-instagram&gt;</code> instead of
+<code>&lt;insta-gram&gt;</code>.</p>
+<h2 id="-polymer-something-x-something-"><code>&lt;polymer-something&gt;</code> &amp; <code>&lt;x-something&gt;</code></h2>
+<p>Nowadays we&#39;ve been using libraries like <a href="http://www.polymer-project.org/">Polymer</a>
+and <a href="http://x-tags.org/">X-Tag</a> to help us write custom elements.
+Those libraries usually include a prefix to identify their elements (e.g
+<code>&lt;polymer-something&gt;</code>, <code>&lt;x-something&gt;</code>), so when people create an element using
+Polymer for example they also include this <code>polymer-*</code> prefix.</p>
+<p>This is considered a bad practice, because we don&#39;t want to build a world where
+elements are seen as being &quot;owned&quot; by Polymer or X-Tag or whatever framework may
+later come along.</p>
+<p>The text before the dash is effectively a namespace and you should want to keep
+it short but also unique. Try not to overlap on someone else&#39;s prefix if
+possible.</p>
+<h2 id="-reserved-names-"><code>&lt;reserved-names&gt;</code></h2>
+<p>There are also some reserved names that you need to avoid:</p>
+<ul>
+<li><code>annotation-xml</code></li>
+<li><code>color-profile</code></li>
+<li><code>font-face</code></li>
+<li><code>font-face-src</code></li>
+<li><code>font-face-uri</code></li>
+<li><code>font-face-format</code></li>
+<li><code>font-face-name</code></li>
+<li><code>missing-glyph</code></li>
+</ul>
+<p>The list of names above is the summary of all hyphen-containing element names
+from the applicable specifications, namely
+<a href="http://www.w3.org/TR/SVG/eltindex.html">SVG</a> and
+<a href="http://www.w3.org/TR/MathML/">MathML</a>.</p>
+<h2 id="tools">Tools</h2>
+<p>If you want to check if a given string is a valid custom element name, check
+<a href="http://mothereff.in/custom-element-name">Mathias Bynens&#39;s app</a>. This little
+nice tool was built using <a href="https://github.com/sindresorhus/validate-element-name/">Sindre Sorhus&#39;s node module</a>
+that allows you to programmatically validate a custom element name.</p>
+<h2 id="what-about-you-">What about you?</h2>
+<p>Tell us below how do you usually name your elements and share your thoughts
+about your own custom elements naming conventions.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/how-should-i-name-my-element</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/how-should-i-name-my-element</guid>
+            <pubDate>Mon, 28 Apr 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[HTML Imports: #include for the web]]></title>
+            <description><![CDATA[<p>Think about how you load different types of resources on the web. For JS, we
+have <code>&lt;script src&gt;</code>. For CSS, your go-to is probably <code>&lt;link rel=&quot;stylesheet&quot;&gt;</code>.
+For images it&#39;s <code>&lt;img&gt;</code>. Video has <code>&lt;video&gt;</code>. Audio, <code>&lt;audio&gt;</code>… Get to the
+point! The majority of the web&#39;s content has a simple and declarative way to
+load itself. Not so for HTML.</p>
+]]></description>
+            <link>http://webcomponents.org/articles/html-imports-include-for-the-web</link>
+            <guid isPermaLink="true">http://webcomponents.org/articles/html-imports-include-for-the-web</guid>
+            <pubDate>Mon, 11 Nov 2013 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
